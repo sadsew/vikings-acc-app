@@ -50,3 +50,8 @@ main.js.map
 
 .idea
 npm-debug.log.*
+
+*.zip
+*.rar
+*.tar
+*.tar.gz
