@@ -1,21 +1,23 @@
 // @flow
-import * as React from 'react';
-import { Link } from 'react-router-dom';
+import React, { Component } from 'react';
+import Header from './Header';
 import Switcher from './Switcher';
+import Footer from './Footer';
+
+import styles from '../assets/styles/App.scss';
 
 type Props = {};
 
-export default class App extends React.Component<Props> {
+export default class App extends Component<Props> {
   props: Props;
   render() {
     return (
-      <div className="app-container">
-        <div className="header">
-          <Link to="/" replace>Main</Link>
-          <Link to="/configs" replace>Config</Link>
+      <div className={styles['app-container']}>
+        <div className={styles.surface}>
+          <Header />
+          <Switcher />
+          <Footer />
         </div>
-        <Switcher />
-        <div className="footer">footer</div>
       </div>
     );
   }

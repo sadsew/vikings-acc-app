@@ -5,7 +5,10 @@ import thunk from 'redux-thunk';
 import { createHashHistory } from 'history';
 import { routerMiddleware, routerActions } from 'react-router-redux';
 import { createLogger } from 'redux-logger';
+import throttle from 'lodash/throttle';
 import rootReducer from '../reducers';
+
+import { saveState } from '../utils/localStorage';
 
 type InitialState = {};
 
@@ -61,6 +64,12 @@ const configureStore = (initialState?: InitialState) => {
       () => store.replaceReducer(require('../reducers')) // eslint-disable-line global-require
     );
   }
+
+  store.subscribe(
+    throttle(() => {
+      saveState(store.getState());
+    }, 1000)
+  );
 
   return store;
 };

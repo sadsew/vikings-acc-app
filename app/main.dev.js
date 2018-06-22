@@ -62,16 +62,14 @@ app.on('ready', async () => {
 
   mainWindow = new BrowserWindow({
     show: false,
-    width: 800,
-    height: 650,
-    resizable: false,
-    fullscreen: false,
+    width: 450,
+    height: 700,
+    resizable: true,
+    fullscreen: false
   });
 
   mainWindow.loadURL(`file://${__dirname}/app.html`);
 
-  // @TODO: Use 'ready-to-show' event
-  //        https://github.com/electron/electron/blob/master/docs/api/browser-window.md#using-ready-to-show-event
   mainWindow.webContents.on('did-finish-load', () => {
     if (!mainWindow) {
       throw new Error('"mainWindow" is not defined');
@@ -80,10 +78,10 @@ app.on('ready', async () => {
     mainWindow.focus();
   });
 
-  mainWindow.webContents.on("will-navigate", (event) => {
-    console.log("will-navigate triggered");
+  mainWindow.webContents.on('will-navigate', event => {
+    console.log('will-navigate triggered');
     event.preventDefault();
-  })
+  });
 
   mainWindow.on('closed', () => {
     mainWindow = null;

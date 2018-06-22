@@ -10,12 +10,11 @@ type Props = {
 };
 
 export default class Root extends Component<Props> {
-  props: Props;
   render() {
     return (
       <Provider store={this.props.store}>
         <ConnectedRouter history={this.props.history}>
-          <App />
+          <App store={this.props.store} />
         </ConnectedRouter>
       </Provider>
     );

@@ -16,9 +16,10 @@ export default class MenuBuilder {
       this.setupDevelopmentEnvironment();
     }
 
-    const template = process.platform === 'darwin'
-      ? this.buildDarwinTemplate()
-      : this.buildDefaultTemplate();
+    const template =
+      process.platform === 'darwin'
+        ? this.buildDarwinTemplate()
+        : this.buildDefaultTemplate();
 
     const menu = Menu.buildFromTemplate(template);
     Menu.setApplicationMenu(menu);
@@ -44,17 +45,17 @@ export default class MenuBuilder {
 
   buildDarwinTemplate() {
     const subMenuAbout = {
-      label: 'Electron',
+      label: 'VikingsAPP',
       submenu: [
         {
-          label: 'About ElectronReact',
+          label: 'About VikingsAPP',
           selector: 'orderFrontStandardAboutPanel:'
         },
         { type: 'separator' },
         { label: 'Services', submenu: [] },
         { type: 'separator' },
         {
-          label: 'Hide ElectronReact',
+          label: 'Hide VikingsAPP',
           accelerator: 'Command+H',
           selector: 'hide:'
         },
@@ -93,17 +94,6 @@ export default class MenuBuilder {
     const subMenuViewDev = {
       label: 'View',
       submenu: [
-        // {
-        //   label: 'Reload',
-        //   accelerator: 'CmdOrCtrl+R',
-        //   click: () => {
-        //     this.mainWindow.webContents.on("will-navigate", (event) => {
-        //       console.log("will-navigate triggered");
-        //       event.preventDefault();
-        //     })
-        //     console.log('reloading off');
-        //   }
-        // },
         {
           label: 'Toggle Full Screen',
           accelerator: 'Ctrl+Command+F',
@@ -148,12 +138,6 @@ export default class MenuBuilder {
     const subMenuHelp = {
       label: 'Help',
       submenu: [
-        {
-          label: 'About',
-          click() {
-            shell.openExternal('https://zak.su');
-          }
-        },
         {
           label: 'Author',
           click() {
@@ -232,29 +216,9 @@ export default class MenuBuilder {
         label: 'Help',
         submenu: [
           {
-            label: 'Learn More',
+            label: 'Author',
             click() {
-              shell.openExternal('http://electron.atom.io');
-            }
-          },
-          {
-            label: 'Documentation',
-            click() {
-              shell.openExternal(
-                'https://github.com/atom/electron/tree/master/docs#readme'
-              );
-            }
-          },
-          {
-            label: 'Community Discussions',
-            click() {
-              shell.openExternal('https://discuss.atom.io/c/electron');
-            }
-          },
-          {
-            label: 'Search Issues',
-            click() {
-              shell.openExternal('https://github.com/atom/electron/issues');
+              shell.openExternal('https://zak.su');
             }
           }
         ]

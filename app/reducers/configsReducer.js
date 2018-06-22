@@ -9,18 +9,18 @@ export type ConfigsState = {
 const initialState = {
   foo: 1,
   bar: true,
-  baz: 'three',
+  baz: 'three'
 };
 
 type actionType = {
   +type: string
 };
 
-export default function counter(state: ConfigsState = initialState, action: actionType) {
+export default (state: ConfigsState = initialState, action: actionType) => {
   switch (action.type) {
     case 'UPDATE_CONFIGS':
       return state;
     default:
       return state;
   }
-}
+};

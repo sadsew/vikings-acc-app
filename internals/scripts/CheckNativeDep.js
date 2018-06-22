@@ -47,13 +47,6 @@ ${chalk.whiteBright.bgRed.bold('npm install your-package --save')}
 ${chalk.bold('Install the package to "./app/package.json"')}
 ${chalk.whiteBright.bgGreen.bold('cd ./app && npm install your-package --save')}
 
-
-Read more about native dependencies at:
-${chalk.bold(
-        'https://github.com/chentsulin/electron-react-boilerplate/wiki/Module-Structure----Two-package.json-Structure'
-      )}
-
-
 `);
 
       process.exit(1);

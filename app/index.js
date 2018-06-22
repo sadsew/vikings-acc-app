@@ -3,10 +3,12 @@ import { render } from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 import Root from './components/Root';
 import { configureStore, history } from './store/configureStore';
+import { loadState } from './utils/localStorage';
 import './fonts.global.css';
 import './app.global.css';
 
-const store = configureStore();
+const persistedState = loadState();
+const store = configureStore(persistedState);
 
 render(
   <AppContainer>
