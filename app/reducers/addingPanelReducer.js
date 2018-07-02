@@ -2,25 +2,11 @@
 import { TOGGLE_PANEL } from '../actions/addingPanelActions';
 
 export type AddingPanelState = {
-  class: string,
-  form: {
-    type: number,
-    name: string,
-    packDate: string,
-    resType: [],
-    resValue: number
-  }
+  class: string
 };
 
 const initialState = {
-  class: 'not-showed',
-  form: {
-    type: 0,
-    name: '',
-    packDate: '',
-    resType: [],
-    resValue: 0
-  }
+  class: 'not-showed'
 };
 
 type actionType = {

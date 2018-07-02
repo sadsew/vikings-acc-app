@@ -1,0 +1,107 @@
+
+.account-item-type,
+.account-item-name {
+  height: 20px;
+}
+
+.account-item {
+  background: #191919;
+  margin-bottom: 5px;
+  border-radius: 3px;
+  border: 1px solid #222;
+}
+
+// .account-item:last-child {
+//   border-bottom: 0;
+// }
+
+.account-item .account-item-header {
+  position: relative;
+  background: rgba(#000, 0.2);
+}
+
+.account-item .account-item-header .account-control-buttons {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+button i {
+  cursor: pointer;
+}
+
+.account-control-button-play,
+.account-control-button-edit,
+.account-control-button-delete {
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.3);
+  width: 24px;
+  height: 24px;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  margin-right: 3px;
+  margin-top: 3px;
+  border-radius: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.account-control-button-play {
+  color: rgb(69, 150, 69);
+}
+
+.account-control-button-edit {
+  color: rgb(124, 124, 124);
+}
+
+.account-control-button-delete {
+  color: rgb(190, 49, 49);
+}
+
+.account-item .account-item-header div {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.account-item-name {
+  line-height: 25px;
+  padding: 5px 10px;
+  color: #777;
+  font-weight: 700;
+  font-size: 0.8em;
+}
+
+.account-item-type img {
+  margin: 6px 0 0 6px;
+  height: 18px;
+  border-radius: 2px;
+}
+
+.account-item-comment {
+  display: block;
+  font-size: 0.7em;
+  color: #777;
+  padding: 10px 5px;
+}
+
+.account-item-bages {
+  margin-top: 8px;
+  margin-bottom: 10px;
+  padding-left: 28px;
+}
+
+.account-item-bages span {
+  display: inline-block;
+  padding: 2px 5px;
+  color: #888;
+  margin-right: 5px;
+  border-radius: 5px;
+  font-size: 0.7em;
+}
+
+.account-item-name-days {
+  display: inline-block;
+  color: #444;
+  padding-left: 5px;
+  font-weight: 300;
+  font-size: 0.9em;
+}

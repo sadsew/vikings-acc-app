@@ -1,0 +1,23 @@
+.header {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  right: 0;
+}
+
+.button {
+  height: 25px;
+  padding: 0 10px;
+  margin: 7px 9px 5px 5px;
+  background: #232323;
+  color: #ccc;
+  border: 1px solid #292929;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.5s;
+  text-transform: uppercase;
+}
+
+.button:hover {
+  background: #313131;
+}

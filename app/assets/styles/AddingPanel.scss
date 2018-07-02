@@ -1,0 +1,224 @@
+.adding-panel {
+  position: absolute;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 658px;
+  color: #eee;
+  box-sizing: border-box;
+  background: rgba(11, 11, 11, 0.99);
+}
+
+.adding-panel-header {
+  background: #191919;
+  width: 100%;
+  height: 30px;
+  margin-bottom: 15px;
+}
+
+.adding-panel .panel-title {
+  font-size: 0.8em;
+  text-transform: uppercase;
+  font-weight: 300;
+  line-height: 30px;
+  padding-left: 10px;
+  color: #777;
+}
+
+.adding-panel input[type=text],
+.adding-panel input[type=date],
+.adding-panel input[type=number] {
+  box-sizing: border-box;
+  width: 100%;
+  height: 30px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #999;
+  padding: 0 10px;
+  font-size: 0.9em;
+  font-weight: 300;
+  font-family: sans-serif;
+  border: 1px solid #191919;
+  border-radius: 3px;
+}
+
+.adding-panel input[type=text]::-webkit-input-placeholder,
+.adding-panel input[type=date]::-webkit-input-placeholder,
+.adding-panel input[type=number]::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.2);
+  font-weight: 300;
+}
+
+.input-block {
+  position: relative;
+  width: 100%;
+  height: 30px;
+  margin-bottom: 15px;
+  margin-left: 10px;
+}
+
+.input-block-textarea {
+  height: 100px;
+}
+
+.form-footer button {
+  background: #111;
+  border: 1px solid #191919;
+  color: #eee;
+  padding: 8px 10px;
+  margin-right: 21px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.form-footer button:hover {
+  background: #191919;
+  border: 1px solid #222;
+  color: #fff;
+}
+
+.form-footer-left {
+  vertical-align: top;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 75%;
+  text-align: right;
+  font-size: 0.8em;
+  line-height: 30px;
+  padding-right: 10px;
+}
+
+.form-footer-right {
+  vertical-align: top;
+  display: inline-block;
+  width: 25%;
+  text-align: right;
+}
+
+.input-block::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.input-block div {
+  display: inline-block;
+  height: 30px;
+}
+
+.input-block .input-block-title {
+  position: absolute;
+  width: 130px;
+  line-height: 30px;
+  font-size: 0.8em;
+  color: #999;
+}
+
+.input-block .input-block-field {
+  position: absolute;
+  left: 140px;
+  width: 285px;
+}
+
+.input-block .input-block-field div {
+  box-sizing: border-box;
+  height: 30px;
+  line-height: 30px;
+  margin-right: 5px;
+  background: #222;
+  border: 1px solid #444;
+  padding: 0 8px;
+  font-size: 0.7em;
+}
+
+.input-block .input-block-field div:hover {
+  background: #333;
+  border: 1px solid #777;
+}
+
+.input-block .input-block-field textarea {
+  resize: none;
+  box-sizing: border-box;
+  width: 285px;
+  height: 100px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #999;
+  padding: 10px;
+  font-size: 0.9em;
+  font-weight: 300;
+  font-family: sans-serif;
+  border: 1px solid #191919;
+  border-radius: 3px;
+}
+
+.input-block .radio-block-field {
+  position: absolute;
+  top: 3px;
+  left: 140px;
+  width: 291px;
+}
+
+.input-block .radio-block-field input[type=radio] {
+  position: absolute;
+  opacity: 0;
+}
+
+.input-block .radio-block-field input + span {
+  display: inline-block;
+  padding: 3px 7px;
+  margin-right: 5px;
+  font-size: 0.8em;
+  background-color: #191919;
+  color: rgb(255, 255, 255);
+  transition: all 1s;
+  border: 1px solid #222;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.input-block .radio-block-field input:checked + span {
+  background-color: #fff;
+  color: rgb(44, 44, 44);
+}
+
+.input-block-check-button {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid #191919;
+  color: #fff;
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+}
+
+/* Panel open/close button */
+
+.panel-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.panel-button .close-button {
+  box-sizing: border-box;
+  border: 0;
+  height: 30px;
+  padding: 0 10px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 0.9em;
+  font-weight: 300;
+  background: rgba(11, 11, 11, 0.99);
+  color: rgb(167, 48, 48);
+}
+
+.panel-button .close-button:hover {
+  color: rgb(226, 70, 70);
+}
+
+.panel-button button i {
+  cursor: pointer;
+}

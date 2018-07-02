@@ -1,0 +1,18 @@
+.screens-switcher {
+  box-sizing: border-box;
+  margin-top: 2px;
+  height: 614px;
+  overflow-y: scroll;
+}
+
+.screens-switcher::-webkit-scrollbar {
+  width: 6px;
+}
+
+.screens-switcher::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.screens-switcher::-webkit-scrollbar-thumb {
+  background-color: rgba(222, 222, 222, 0.3);
+}
