@@ -5,22 +5,7 @@ import styles from '../assets/styles/Account.scss';
 import fblogo from '../assets/images/fblogo.jpg';
 import pllogo from '../assets/images/pllogo.jpg';
 import defaultlogo from '../assets/images/defaultlogo.jpg';
-
-// import Props from '../types/ComponentsProps';
-
-type Props = {
-  account: {
-    id: string,
-    name: string,
-    type: string,
-    packDate: string,
-    comments: string
-  },
-  actions: {
-    removeAccount: (payload: string) => void,
-    editAccount: (payload: string) => void
-  }
-};
+import Props from '../types/ComponentsProps';
 
 export default class Account extends Component<Props> {
   playButtonHandler: (payload: string) => void;
