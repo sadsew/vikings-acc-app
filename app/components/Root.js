@@ -1,15 +1,10 @@
-// @flow
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'react-router-redux';
+import PropTypes from 'prop-types';
 import App from './App';
 
-type Props = {
-  store: {},
-  history: {}
-};
-
-export default class Root extends Component<Props> {
+class Root extends Component {
   render() {
     return (
       <Provider store={this.props.store}>
@@ -20,3 +15,10 @@ export default class Root extends Component<Props> {
     );
   }
 }
+
+Root.propTypes = {
+  store: PropTypes.shape({}).isRequired,
+  history: PropTypes.shape({}).isRequired
+};
+
+export default Root;

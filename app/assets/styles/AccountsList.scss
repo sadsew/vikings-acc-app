@@ -1,12 +1,16 @@
 .accounts-list {
   color: #eee;
   font-size: 16px;
-  padding: 8px 2px 8px 8px;
+  padding: 8px 8px 8px 15px;
 }
 
 .accounts-list-title {
   color: #777;
   font-weight: 300;
-  font-size: 0.7em;
+  font-size: 1em;
   padding: 10px 0;
+}
+
+.no-accounts-msg {
+  color: #333;
 }

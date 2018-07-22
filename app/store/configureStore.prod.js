@@ -1,5 +1,3 @@
-// @flow
-
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import { createHashHistory } from 'history';
@@ -8,13 +6,11 @@ import throttle from 'lodash/throttle';
 import rootReducer from '../reducers';
 import { saveState } from '../utils/localStorage';
 
-type InitialState = {};
-
 const history = createHashHistory();
 const router = routerMiddleware(history);
 const enhancer = applyMiddleware(thunk, router);
 
-function configureStore(initialState?: InitialState) {
+function configureStore(initialState) {
   const store = createStore(rootReducer, initialState, enhancer);
 
   store.subscribe(

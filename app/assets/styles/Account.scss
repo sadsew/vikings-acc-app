@@ -1,12 +1,11 @@
-
 .account-item-type,
 .account-item-name {
-  height: 20px;
+  height: 25px;
 }
 
 .account-item {
   background: #191919;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   border-radius: 3px;
   border: 1px solid #222;
 }
@@ -35,14 +34,15 @@ button i {
 .account-control-button-delete {
   cursor: pointer;
   background: rgba(0, 0, 0, 0.3);
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
   text-transform: uppercase;
-  font-size: 0.8em;
-  margin-right: 3px;
+  font-size: 1.1em;
+  margin-right: 5px;
   margin-top: 3px;
   border-radius: 3px;
   border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: 0.5s all;
 }
 
 .account-control-button-play {
@@ -57,22 +57,28 @@ button i {
   color: rgb(190, 49, 49);
 }
 
+.account-control-button-play:hover,
+.account-control-button-edit:hover,
+.account-control-button-delete:hover {
+  background: rgba(95, 95, 95, 0.2);
+}
+
 .account-item .account-item-header div {
   display: inline-block;
   vertical-align: top;
 }
 
 .account-item-name {
-  line-height: 25px;
+  line-height: 27px;
   padding: 5px 10px;
   color: #777;
   font-weight: 700;
-  font-size: 0.8em;
+  font-size: 1em;
 }
 
 .account-item-type img {
   margin: 6px 0 0 6px;
-  height: 18px;
+  height: 23px;
   border-radius: 2px;
 }
 
@@ -100,8 +106,13 @@ button i {
 
 .account-item-name-days {
   display: inline-block;
-  color: #444;
-  padding-left: 5px;
-  font-weight: 300;
-  font-size: 0.9em;
+  color: #333;
+  padding-left: 15px;
+  font-weight: 500;
+  font-size: 1em;
+}
+
+.account-item-name-days span {
+  color: #299c46;
+  font-weight: 500;
 }

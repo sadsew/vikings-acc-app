@@ -1,5 +1,3 @@
-// @flow
-
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import { createHashHistory } from 'history';
@@ -10,11 +8,9 @@ import rootReducer from '../reducers';
 
 import { saveState } from '../utils/localStorage';
 
-type InitialState = {};
-
 const history = createHashHistory();
 
-const configureStore = (initialState?: InitialState) => {
+const configureStore = initialState => {
   // Redux Configuration
   const middleware = [];
   const enhancers = [];

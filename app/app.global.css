@@ -35,3 +35,10 @@ input[type=number]:focus,
 textarea:focus {
   margin: 0;
 }
+
+a {
+  cursor: pointer;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+}
