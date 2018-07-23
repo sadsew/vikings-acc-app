@@ -33,14 +33,39 @@ class MainMenuPanel extends Component {
         id="mainMenu"
         className={`${styles.mainMenuPanel} ${styles[this.props.class]}`}
       >
-        <div className={styles['main-menu-block']}>
-          <button onClick={saveStateToFile}>CREATE CONFIG FILE</button>
-          <div id="resConteiner" />
-        </div>
+        <h2>General settings</h2>
+
+        <button
+          className={`${styles['main-menu-option']} ${
+            this.props.options.fullscreen ? styles['option-checked'] : false
+          }`}
+          onClick={this.props.optionsActions.setFullScreenMode}
+        >
+          Open new windows in fullscreen mode
+          <div className={styles.checker}>
+            {this.props.options.fullscreen ? (
+              <i className={`fa fa-check ${styles.check}`} />
+            ) : (
+              <i className={`fa fa-times ${styles.uncheck}`} />
+            )}
+          </div>
+        </button>
+
+        <h2>Saving and restoring accounts</h2>
+
+        <button
+          className={`${styles['main-menu-option']}`}
+          onClick={saveStateToFile}
+        >
+          Create config file
+          <div className={styles.message}>
+            <div id="resConteiner" />
+          </div>
+        </button>
 
         <div className={styles['main-menu-block']}>
           <Files
-            className="files-dropzone"
+            className={`${styles['files-dropzone']}`}
             onChange={file => {
               this.fileReader.readAsText(file[0]);
             }}
@@ -69,7 +94,13 @@ class MainMenuPanel extends Component {
 
 MainMenuPanel.propTypes = {
   class: PropTypes.string.isRequired,
-  restore: PropTypes.func.isRequired
+  restore: PropTypes.func.isRequired,
+  options: PropTypes.shape({
+    fullscreen: PropTypes.bool
+  }).isRequired,
+  optionsActions: PropTypes.shape({
+    setFullScreenMode: PropTypes.func
+  }).isRequired
 };
 
 export default MainMenuPanel;

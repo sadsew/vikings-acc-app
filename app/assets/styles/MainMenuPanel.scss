@@ -11,22 +11,102 @@
   padding-top: 30px;
 }
 
+.mainMenuPanel h2 {
+  font-size: 1.2em;
+  color: #999;
+  padding: 20px 0 15px 0;
+}
+
+.mainMenuPanel h2:first-child {
+  font-size: 1.2em;
+  color: #999;
+  padding: 0 0 15px 0;
+}
+
 .main-menu-block {
-  background: #111;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: block;
+  position: relative;
   width: 400px;
-  margin: 0 auto 20px auto;
-  padding: 20px;
+  margin: 0 auto 0 auto;
+  color: #555;
+  border: 2px dashed #333;
+  padding: 0;
+  font-size: 1em;
+  text-align: center;
+  transition: 0.3s all;
   border-radius: 7px;
 }
 
-.mainMenuPanel button {
-  font-size: 1em;
-  color: #ccc;
-  background: #111;
-  padding: 5px 10px;
-  border-radius: 10px;
-  margin: 10px 0;
+.files-dropzone {
+  cursor: pointer;
+  padding: 30px 0;
 }
+
+.main-menu-option {
+  box-sizing: border-box;
+  cursor: pointer;
+  display: block;
+  position: relative;
+  width: 400px;
+  margin: 0 auto 10px auto;
+  background: #111;
+  color: #555;
+  border: 1px solid #333;
+  padding: 10px 0 10px 10px;
+  font-size: 1em;
+  text-align: left;
+  transition: 0.3s all;
+  border-radius: 7px;
+}
+
+.main-menu-option:hover {
+  background: #191919;
+}
+
+.main-menu-option .message {
+  cursor: pointer;
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  width: 150px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.main-menu-option .checker {
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  background: #333;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.main-menu-option .checker .check {
+  margin: 0;
+  padding: 0;
+  color: #48a74d;
+}
+
+.main-menu-option .checker .uncheck {
+  margin: 0;
+  padding: 0;
+  color: #d84823;
+}
+
+.option-checked {
+  background: #222;
+  color: #eee;
+}
+
+// ANIMATION ============================================== /
 
 .show {
   opacity: 1;

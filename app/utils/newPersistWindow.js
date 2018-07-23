@@ -2,7 +2,7 @@ import electron from 'electron';
 
 const { BrowserWindow } = electron.remote;
 
-function createNewPersistWindow(persist, accType, logged) {
+function createNewPersistWindow(persist, accType, logged, maximize = false) {
   let www = new BrowserWindow({
     width: 1200,
     height: 800,
@@ -46,6 +46,9 @@ function createNewPersistWindow(persist, accType, logged) {
     }
   }
 
+  if (maximize) {
+    www.maximize();
+  }
   www.show();
 }
 

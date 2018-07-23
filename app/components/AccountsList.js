@@ -5,7 +5,7 @@ import styles from '../assets/styles/AccountsList.scss';
 
 class AccountsList extends Component {
   render() {
-    const { accounts, actions, panels } = this.props;
+    const { accounts, actions, panels, options } = this.props;
     return (
       <div className={styles['accounts-list']}>
         <h4 className={styles['accounts-list-title']}>
@@ -26,6 +26,7 @@ class AccountsList extends Component {
               actions={actions}
               editPanel={panels.editAccountPanel.class}
               key={account.id}
+              fullscreen={options.fullscreen}
             />
           ))}
         <h4 className={styles['accounts-list-title']}>
@@ -46,6 +47,7 @@ class AccountsList extends Component {
               actions={actions}
               editPanel={panels.editAccountPanel.class}
               key={account.id}
+              fullscreen={options.fullscreen}
             />
           ))}
       </div>
@@ -56,7 +58,8 @@ class AccountsList extends Component {
 AccountsList.propTypes = {
   accounts: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
   actions: PropTypes.shape({}).isRequired,
-  panels: PropTypes.shape({}).isRequired
+  panels: PropTypes.shape({}).isRequired,
+  options: PropTypes.shape({}).isRequired
 };
 
 export default AccountsList;

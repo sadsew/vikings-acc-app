@@ -28,7 +28,7 @@ class Account extends Component {
 
   playButtonHandler() {
     const { id, type, logged } = this.props.account;
-    newPersistWindow(id, type, logged);
+    newPersistWindow(id, type, logged, this.props.fullscreen);
     if (!logged) {
       this.props.actions.accountsActions.accountLogIn(id);
     }
@@ -94,6 +94,7 @@ class Account extends Component {
 }
 
 Account.propTypes = {
+  fullscreen: PropTypes.bool.isRequired,
   account: PropTypes.shape({
     id: PropTypes.string,
     type: PropTypes.string,

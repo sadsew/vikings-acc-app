@@ -1,7 +1,7 @@
 {
   "name": "vikingsapp",
   "productName": "vikingsapp",
-  "version": "1.0.0",
+  "version": "1.1.2",
   "description": "VikingsAPP",
   "main": "./main.prod.js",
   "author": {
